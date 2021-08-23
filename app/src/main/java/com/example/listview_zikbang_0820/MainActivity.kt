@@ -23,6 +23,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // 방 데이터 추가
+
         roomList.add(RoomData(18000, "강남구", 5, "방1"))
         roomList.add(RoomData(2700, "강서구", 2, "방2"))
         roomList.add(RoomData(26000, "마포구", -2, "방3"))
@@ -31,6 +33,8 @@ class MainActivity : AppCompatActivity() {
         roomList.add(RoomData(3400, "동대문구", 2, "방6"))
         roomList.add(RoomData(3100, "은평구", 3, "방7"))
         roomList.add(RoomData(18700, "경기도 파주시", 1, "방8"))
+
+        // 어댑터 연결 / 실행
 
         mRoomAdapter = RoomAdapter(this, R.layout.roomlist_item, roomList)
 
