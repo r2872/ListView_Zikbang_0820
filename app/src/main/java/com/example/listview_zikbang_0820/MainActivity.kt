@@ -10,7 +10,7 @@ import java.util.ArrayList
 
 class MainActivity : AppCompatActivity() {
 
-    // 별개 주석용 브랜치.
+    // 별개 주석용 브랜치02.
 
     private lateinit var binding: ActivityMainBinding
 
