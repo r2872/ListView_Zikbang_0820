@@ -29,11 +29,11 @@ class RoomAdapter(
         val data = mList[position]
 
         val price = row.findViewById<TextView>(R.id.roomPrice)
-        val address = row.findViewById<TextView>(R.id.roomAddress)
+        val addressAndFloor = row.findViewById<TextView>(R.id.addressAndFloor)
         val detail = row.findViewById<TextView>(R.id.roomDetail)
 
-        price.text = data.price.toString()
-        address.text = data.address
+        price.text = data.getFormattedPrice()
+        addressAndFloor.text = data.address
         detail.text = data.details
 
 
