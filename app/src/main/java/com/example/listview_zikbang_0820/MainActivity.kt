@@ -10,6 +10,8 @@ import java.util.ArrayList
 
 class MainActivity : AppCompatActivity() {
 
+    // 별개 주석용 브랜치.
+
     private lateinit var binding: ActivityMainBinding
 
     private val roomList = ArrayList<RoomData>()
