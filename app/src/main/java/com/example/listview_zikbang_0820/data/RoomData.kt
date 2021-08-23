@@ -1,10 +1,16 @@
 package com.example.listview_zikbang_0820.data
 
 import android.graphics.drawable.Drawable
+import java.io.Serializable
 import java.text.NumberFormat
 import java.util.*
 
-class RoomData(val price: Int, val address: String, val floor: Int, val details: String) {
+class RoomData(
+    val price: Int,
+    val address: String,
+    val floor: Int,
+    val details: String
+) : Serializable {
 
     fun getFormattedFloor(): String {
         if (this.floor > 0) {

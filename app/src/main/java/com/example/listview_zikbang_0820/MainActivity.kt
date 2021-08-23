@@ -1,5 +1,6 @@
 package com.example.listview_zikbang_0820
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.listview_zikbang_0820.databinding.ActivityMainBinding
@@ -32,5 +33,15 @@ class MainActivity : AppCompatActivity() {
         mRoomAdapter = RoomAdapter(this, R.layout.roomlist_item, roomList)
 
         binding.roomListView.adapter = mRoomAdapter
+
+        binding.roomListView.setOnItemClickListener { parent, view, position, id ->
+            val clickedRoom = roomList[position]
+
+            val intent = Intent(this, ViewRoomDetail::class.java)
+
+            intent.putExtra("roomData", clickedRoom)
+
+            startActivity(intent)
+        }
     }
 }
